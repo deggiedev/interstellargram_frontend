@@ -1,4 +1,5 @@
 import React from 'react';
+import MainContainer from './containers/MainContainer';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <header>
         InterstellarGram
       </header>
+      <MainContainer />
     </div>
   );
 }
