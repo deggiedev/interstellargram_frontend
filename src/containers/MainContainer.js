@@ -5,7 +5,7 @@ class MainContainer extends React.Component {
     render() {
       return (
           <>
-          <h1>Recent Astronomy Posts</h1>
+          
           </>
         );
       }
