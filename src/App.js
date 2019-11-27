@@ -36,7 +36,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut} />
-        <MainContainer />
+        <MainContainer activeuser={this.state.user}/>
       </div>
     );
   }
