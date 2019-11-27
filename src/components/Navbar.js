@@ -19,10 +19,10 @@ const Navbar = ({ user, signUp, logIn, logOut }) => {
                                     <Link to='/'>Home</Link>
                                 </li>
                                 <li>
-                                    <Link ></Link>
+                                    <Link >My Astronomy</Link>
                                 </li>
                                 <li>
-                                    <Link></Link>
+                                    <Link>Astronomy Events</Link>
                                 </li>
                             </ul>
                         </div>  
