@@ -7,6 +7,7 @@ import {
     Link } from "react-router-dom";
 import Home from '../containers/Home'
 import MyAstronomy from '../containers/MyAstronomy'
+import CelestialEvents from '../containers/CelestialEvents'
 
 const Navbar = ({ user, signUp, logIn, logOut }, props) => {
     return (
@@ -24,11 +25,17 @@ const Navbar = ({ user, signUp, logIn, logOut }, props) => {
                                 <li>
                                     <Link to='/myastronomy'>My Astronomy</Link>
                                 </li>
+                                <li>
+                                    <Link to='/celestialevents'>Celestial Events</Link>
+                                </li>
                             </ul>
                         </div>  
                         <Switch>
                             <Route path='/myastronomy'>
-                                <MyAstronomy/>
+                                <MyAstronomy user={user}/>
+                            </Route>
+                            <Route path='/celestialevents'>
+                                <CelestialEvents user={user}/>
                             </Route>
                             <Route path='/'>
                                 <Home user={user}/>

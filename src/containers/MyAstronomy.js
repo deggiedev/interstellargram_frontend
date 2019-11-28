@@ -5,7 +5,7 @@ class MyAstronomy extends React.Component {
     render() {
       return (
           <>
-            
+            <h1>My Astronomy</h1>
           </>
         );
       }
