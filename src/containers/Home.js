@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageContainer from './ImageContainer'
 
-class MainContainer extends React.Component {
+class Home extends React.Component {
 
   state = {
     posts: []
@@ -20,10 +20,10 @@ class MainContainer extends React.Component {
     render() {
       return (
           <>
-            {this.props.activeuser ? <ImageContainer posts={this.state.posts} /> : null}
+            {this.props.user ? <ImageContainer posts={this.state.posts} /> : null}
           </>
         );
       }
     }
   
-export default MainContainer;
+export default Home;
