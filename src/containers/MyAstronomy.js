@@ -6,7 +6,8 @@ class MyAstronomy extends React.Component {
     render() {
       return (
           <>
-            <h1>My Astronomy</h1>
+            <textarea placeholder={'description...'}></textarea>
+            <textarea></textarea>
             {this.props.user.posts.map(post => <ImageCard post={post}/>)}
           </>
         );

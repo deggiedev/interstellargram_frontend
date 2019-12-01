@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageCard from '../components/ImageCard'
 
-class ImageContainer extends React.Component {
+class HomeContainer extends React.Component {
  
     render() {
       return (
@@ -12,4 +12,4 @@ class ImageContainer extends React.Component {
       }
     }
   
-export default ImageContainer;
+export default HomeContainer;

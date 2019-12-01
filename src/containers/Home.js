@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageContainer from './ImageContainer'
+import HomeContainer from './HomeContainer'
 
 class Home extends React.Component {
 
@@ -20,7 +20,7 @@ class Home extends React.Component {
     render() {
       return (
           <>
-            {this.props.user ? <ImageContainer posts={this.state.posts} /> : null}
+            {this.props.user ? <HomeContainer posts={this.state.posts} /> : null}
           </>
         );
       }
