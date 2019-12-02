@@ -1,8 +1,8 @@
 const endpoint = 'http://localhost:3000/'
 const signupUrl = `${endpoint}/users`
 const loginUrl = `${endpoint}/login`
+const postsUrl = `${endpoint}/posts`
 const validateUrl = `${endpoint}/validate`
-
 
 const jsonify = res => {
     if (res.ok)
@@ -58,11 +58,25 @@ const validateUser = () => {
         .catch(handleServerError)
 }
 
+const postPost = post => fetch(postsUrl, {
+    method: 'POST',
+    body: JSON.stringify({ post }),
+    headers: constructHeaders({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    })
+}).then(jsonify)
+    .catch(handleServerError)
+
+const getPosts = () => fetch(postsUrl).then(jsonify)
+
 const clearToken = () => localStorage.removeItem('token')
 
 export default {
     signUp,
     logIn,
     validateUser,
-    clearToken
+    clearToken,
+    postPost,
+    getPosts
 }
