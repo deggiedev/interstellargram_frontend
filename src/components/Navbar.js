@@ -9,7 +9,7 @@ import Home from '../containers/Home'
 import MyAstronomy from '../containers/MyAstronomy'
 import CelestialEvents from '../containers/CelestialEvents'
 
-const Navbar = ({ user, signUp, logIn, logOut, errors, submit }) => {
+const Navbar = ({posts, user, signUp, logIn, logOut, errors, submit }) => {
     return (
         <Router>        
             <nav>
@@ -32,13 +32,13 @@ const Navbar = ({ user, signUp, logIn, logOut, errors, submit }) => {
                         </div>  
                         <Switch>
                             <Route path='/myastronomy'>
-                                <MyAstronomy user={user} errors={errors} submit={submit} />
+                                <MyAstronomy posts={posts} user={user} errors={errors} submit={submit} />
                             </Route>
                             <Route path='/celestialevents'>
                                 <CelestialEvents user={user}/>
                             </Route>
                             <Route path='/'>
-                                <Home user={user}/>
+                                <Home posts={posts} user={user}/>
                             </Route>
                         </Switch>
                         </>                

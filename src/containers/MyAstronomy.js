@@ -13,18 +13,23 @@ class MyAstronomy extends React.Component {
   //  .then(resp => resp.json())
   //}
 
-  //componentDidUpdate(prevprops) {
-  //  if (prevprops) {
+  //componentDidUpdate(prevProps) {
+  //  if (prevProps.user.posts !== this.props.user.posts) {
   //    this.getPosts()
   //    .then(posts => this.setState({ posts }))
   //  }
+  //}
+
+  //componentDidMount() {
+  //    this.getPosts()
+  //    .then(posts => this.setState({ posts }))
   //}
 
     render() {
       return (
           <>
             <PostForm errors={this.props.errors} submit={this.props.submit}/>
-            {this.props.user.posts.map(post =>  <ImageCard post={post}/>)}
+            {this.props.posts.map(post => post.user.id === this.props.user.id ? <ImageCard post={post}/> : null)}
           </>
         );
       }

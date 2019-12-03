@@ -6,10 +6,18 @@ import API from './adapters/API';
 class App extends React.Component {
 
   state = {
-    user: undefined
+    user: undefined,
+    posts: []
   }
 
+  getPosts = () => {
+    return fetch('http://localhost:3000/posts')
+    .then(resp => resp.json())
+   }
+
   componentDidMount() {
+    this.getPosts()
+    .then(posts => this.setState({ posts }))
     API.validateUser()
       .then(user => {
         this.setState({ user })
@@ -45,7 +53,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut} errors={this.state.errors} submit={this.submitPost}/>
+        <Navbar posts={this.state.posts} user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut} errors={this.state.errors} submit={this.submitPost}/>
       </div>
     );
   }
