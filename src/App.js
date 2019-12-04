@@ -7,17 +7,25 @@ class App extends React.Component {
 
   state = {
     user: undefined,
-    posts: []
+    posts: [],
+    celestial_events: []
   }
 
   getPosts = () => {
     return fetch('http://localhost:3000/posts')
     .then(resp => resp.json())
-   }
+  }
+
+  getCelestialEvents = () => {
+    return fetch('https://api.ipgeolocation.io/astronomy?apiKey=a492bb5528154602849fdaf2624c7e38&ip=1.1.1.1&lang=cn')
+    .then(resp => resp.json())
+  }
 
   componentDidMount() {
     this.getPosts()
     .then(posts => this.setState({ posts }))
+    this.getCelestialEvents()
+    .then(celestial_events => this.setState({ celestial_events }))
     API.validateUser()
       .then(user => {
         this.setState({ user })
@@ -41,7 +49,7 @@ class App extends React.Component {
 
   submitPost = (post) => {
     API.postPost(post)
-      .then(data => this.setState({ user: { ...this.state.user, posts: [...this.state.user.posts, data.post] } }))
+      .then(data => this.setState({ user: { ...this.state.user, posts: [...this.state.user.posts, data.post] } })) 
       .catch(errorPromise => {
         errorPromise
           .then(data => {
