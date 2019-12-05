@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   getCelestialEvents = () => {
-    return fetch('https://api.ipgeolocation.io/astronomy?apiKey=a492bb5528154602849fdaf2624c7e38&ip=1.1.1.1&lang=cn')
+    return fetch('https://api.ipgeolocation.io/astronomy?apiKey=a492bb5528154602849fdaf2624c7e38')
     .then(resp => resp.json())
   }
 

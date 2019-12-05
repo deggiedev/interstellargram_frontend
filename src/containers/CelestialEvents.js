@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CelestialEvents.css';
 
 class CelestialEvents extends React.Component {
  
