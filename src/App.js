@@ -61,7 +61,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar posts={this.state.posts} user={this.state.user} signUp={this.signUp} logIn={this.logIn} logOut={this.logOut} errors={this.state.errors} submit={this.submitPost}/>
+        <Navbar 
+        posts={this.state.posts} 
+        user={this.state.user}
+        celestialEvents={this.state.celestial_events} 
+        signUp={this.signUp} 
+        logIn={this.logIn} 
+        logOut={this.logOut} 
+        errors={this.state.errors} 
+        submit={this.submitPost}/>
       </div>
     );
   }

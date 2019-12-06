@@ -5,7 +5,11 @@ class CelestialEvents extends React.Component {
     render() {
       return (
           <>
-            <h1>Celestial Events</h1>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
           </>
         );
       }
