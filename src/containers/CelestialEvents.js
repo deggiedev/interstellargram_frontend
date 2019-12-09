@@ -6,9 +6,10 @@ class CelestialEvents extends React.Component {
       return (
           <>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Moonrise: {this.props.celestialEvents.moonrise}</li>
+              <li>Moonset: {this.props.celestialEvents.moonset}</li>
+              <li>Sunrise: {this.props.celestialEvents.sunrise}</li>
+              <li>Sunset: {this.props.celestialEvents.sunset}</li>
             </ul>
           </>
         );
