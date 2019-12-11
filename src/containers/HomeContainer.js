@@ -6,7 +6,9 @@ class HomeContainer extends React.Component {
     render() {
       return (
           <>
+            <div className="HomeContainer">
             {this.props.posts.map(post => <ImageCard post={post}/>)}
+            </div>
           </>
         );
       }

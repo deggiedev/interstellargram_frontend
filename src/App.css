@@ -13,6 +13,12 @@
   color: white;
 }
 
+.HomeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px
+}
+
 .imagecard {
   border: 2px solid black;
   max-width: 400px;
