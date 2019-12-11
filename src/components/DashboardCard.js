@@ -4,8 +4,10 @@ class DashboardCard extends React.Component {
     render() {
         return (
             <>
-                <h2>{this.props.celestialEvent}</h2>
-                <h2>{this.props.celestialEventData}</h2>
+                <div className="DashboardCard">
+                    <h2>{this.props.celestialEvent}</h2>
+                    <h2>{this.props.celestialEventData}</h2>
+                </div>
             </>
         )
     }
