@@ -6,8 +6,10 @@ class Dashboard extends React.Component {
     render() {
         return (
             <>
-              <Location celestialEvents={this.props.celestialEvents}/>
-              {Object.entries(this.props.celestialEvents).map(([key, value]) => key !== 'location' ? <DashboardCard celestialEvent={key} celestialEventData={value}/> : null)}
+                <div className="Dashboard">
+                    <Location celestialEvents={this.props.celestialEvents}/>
+                    {Object.entries(this.props.celestialEvents).map(([key, value]) => key !== 'location' ? <DashboardCard celestialEvent={key} celestialEventData={value}/> : null)}
+                </div>
             </>       
         )
     }

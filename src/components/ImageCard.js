@@ -10,9 +10,13 @@ const ImageCard = (props) => {
         
         <>
             <div className='imagecard'>
-                <img style={imageWidth} alt='' src={props.post.image}></img>
-                <h2 className='category'>{props.post.category}</h2>
-                <p className='description'>{props.post.description}</p>  
+                <div className="imagecontainer">
+                    <img style={imageWidth} alt='' src={props.post.image}></img>
+                </div>
+                <div className="post-info">
+                    <h2 className='category'>{props.post.category}</h2>
+                    <p className='description'>{props.post.description}</p>  
+                </div>
             </div>  
         </>
     )

@@ -13,21 +13,23 @@
   color: white;
 }
 
-.HomeContainer {
+.HomeContainer, .MyAstronomyContainer, .Dashboard {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px
+}
+
+.imagecard, .DashboardCard {
+  border: 2px solid black;
+  flex: 1 16%;
 }
 
 .imagecard {
-  border: 2px solid black;
-  max-width: 400px;
-  padding: 2px;
+  padding-top: 10px;
 }
 
-.DashboardCard {
-  border: 2px solid black;
-  max-width: 400px;
-  padding: 2px;
+
+
+.post-info {
+  margin-top: auto;
 }
 
