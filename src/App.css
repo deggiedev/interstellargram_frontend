@@ -2,34 +2,9 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.HomeContainer, .MyAstronomyContainer, .Dashboard {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.imagecard, .DashboardCard {
-  border: 2px solid black;
-  flex: 1 16%;
-}
-
-.imagecard {
-  padding-top: 10px;
-}
 
 
 
-.post-info {
-  margin-top: auto;
-}
+
+
 

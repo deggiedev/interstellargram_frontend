@@ -1,14 +1,15 @@
 import React from 'react';
 import ImageCard from '../components/ImageCard'
+import { Card } from 'semantic-ui-react'
 
 class HomeContainer extends React.Component {
  
     render() {
       return (
           <>
-            <div className="HomeContainer">
+            <Card.Group className="HomeContainer">
             {this.props.posts.map(post => <ImageCard post={post}/>)}
-            </div>
+            </Card.Group>
           </>
         );
       }
