@@ -7,7 +7,7 @@ class HomeContainer extends React.Component {
     render() {
       return (
           <>
-            <Card.Group className="HomeContainer">
+            <Card.Group centered className="HomeContainer">
             {this.props.posts.map(post => <ImageCard post={post}/>)}
             </Card.Group>
           </>

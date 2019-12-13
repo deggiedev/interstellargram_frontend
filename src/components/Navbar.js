@@ -8,6 +8,7 @@ import {
 import Home from '../containers/Home'
 import MyAstronomy from '../containers/MyAstronomy'
 import CelestialEvents from '../containers/CelestialEvents'
+import { List } from 'semantic-ui-react'
 
 const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit }) => {
     return (
@@ -17,18 +18,20 @@ const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, su
                     user && !user.error ? 
                     <>
                         <div>
-                            <button onClick={logOut}>Log out</button>
-                            <ul>
-                                <li>
+                            <List horizontal>
+                                <List.Item>
                                     <Link to='/'>Home</Link>
-                                </li>
-                                <li>
+                                </List.Item>
+                                <List.Item>
                                     <Link to='/myastronomy'>My Astronomy</Link>
-                                </li>
-                                <li>
+                                </List.Item>
+                                <List.Item>
                                     <Link to='/celestialevents'>Celestial Events</Link>
-                                </li>
-                            </ul>
+                                </List.Item>
+                                <List.Item className="log-out">
+                                    <Link onClick={logOut}>Log out</Link>
+                                </List.Item>
+                            </List>
                         </div>  
                         <Switch>
                             <Route path='/myastronomy'>
