@@ -7,8 +7,9 @@ class Location extends React.Component {
       return (
         <>
           <Card centered>
-            <h1>{this.props.celestialEvents.location.city}</h1>
-            <h2>{this.props.celestialEvents.location.district}</h2>
+            <h1>Location</h1>
+            <h2>{this.props.celestialEvents.location.city}</h2>
+            <h3>{this.props.celestialEvents.location.district}</h3>
           </Card>
          </> 
         );

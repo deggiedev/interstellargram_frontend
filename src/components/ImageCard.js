@@ -6,7 +6,7 @@ const ImageCard = (props) => {
     const src = props.post.image
 
     return (
-       <Card>
+       <Card color='grey'>
             <Image src={src}  />
         </Card>
     )

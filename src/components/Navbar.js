@@ -19,17 +19,17 @@ const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, su
                     <>
                         <div>
                             <List horizontal>
-                                <List.Item>
-                                    <Link to='/'>Home</Link>
+                                <List.Item >
+                                    <Link className="Home" to='/'>Home</Link>
                                 </List.Item>
                                 <List.Item>
-                                    <Link to='/myastronomy'>My Astronomy</Link>
+                                    <Link className="My-Astronomy" to='/myastronomy'>My Astronomy</Link>
                                 </List.Item>
                                 <List.Item>
-                                    <Link to='/celestialevents'>Celestial Events</Link>
+                                    <Link className="Celestial-Events" to='/celestialevents'>Celestial Events</Link>
                                 </List.Item>
-                                <List.Item className="log-out">
-                                    <Link onClick={logOut}>Log out</Link>
+                                <List.Item>
+                                    <Link className="log-out" onClick={logOut}>Log out</Link>
                                 </List.Item>
                             </List>
                         </div>  
