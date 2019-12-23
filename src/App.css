@@ -1,9 +1,7 @@
 .App {
   text-align: center;
-  background: linear-gradient(to left, #0B0C10 0%, #1F2833 100%);
-  color: #C5C6C7;
+  background-color: white;
+  color: black;
 }
 
-.Home, .My-Astronomy, .Celestial-Events, .log-out  {
-  color: #C5C6C7;
-}
+

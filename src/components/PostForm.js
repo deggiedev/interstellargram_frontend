@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Form, Button } from 'semantic-ui-react'
 
 const PostForm = ({ submit, errors }) => {
 
@@ -7,7 +8,7 @@ const PostForm = ({ submit, errors }) => {
     const [image, setImage] = useState('')
 
     return (
-        <form onSubmit={e => {
+        <Form onSubmit={e => {
             e.preventDefault();
             submit({ category, description, image })
             setCategory('')
@@ -18,11 +19,11 @@ const PostForm = ({ submit, errors }) => {
                 errors && <div style={{ color: 'red' }}>{errors.join(', ')}</div>
             }
             <span>New post</span>
-            <input placeholder="Category" type="text" name="Category" value={category} onChange={e => setCategory(e.target.value)} />
-            <textarea placeholder="Description..." name="description" value={description} onChange={e => setDescription(e.target.value)} />
-            <input placeholder="Image" type="text" name="Image" value={image} onChange={e => setImage(e.target.value)} />
-            <input type="submit" />
-        </form>
+            <Form.Input className="Category" placeholder="Category" type="text" name="Category" value={category} onChange={e => setCategory(e.target.value)} />
+            <textarea className="Description" placeholder="Description..." name="description" value={description} onChange={e => setDescription(e.target.value)} />
+            <Form.Input className="Image" placeholder="Image" type="text" name="Image" value={image} onChange={e => setImage(e.target.value)} />
+            <Button className="SubmitPost" type="submit">Post</Button>
+        </Form>
     )
 }
 
