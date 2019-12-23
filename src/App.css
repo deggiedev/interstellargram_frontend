@@ -4,14 +4,6 @@
   color: black;
 }
 
-.ImagePost, .CategoryPost, .DescriptionPost  {
-  max-width: 1200px;
-}
-
-.SubmitPost {
-  width: 1200px;
-}
-
 Form {
   padding-bottom: 15px;
 }
