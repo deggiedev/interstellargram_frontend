@@ -6,6 +6,11 @@
 
 Form {
   padding-bottom: 15px;
+  width: 1200px;
+}
+
+.SubmitPost {
+  width: 1200px;
 }
 
 

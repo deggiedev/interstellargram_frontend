@@ -28,7 +28,7 @@ const PostForm = ({ submit, errors }) => {
             <Form.Field/>
                 <textarea className="DescriptionPost" placeholder="Description..." name="description" value={description} onChange={e => setDescription(e.target.value)} />
             <Form.Field/>
-            <Button className="SubmitPost" type="submit">Post</Button>
+            <Button className="SubmitPost" color='blue' type="submit">Post</Button>
         </Form>
     )
 }
