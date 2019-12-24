@@ -1,15 +1,17 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react'
+import { Header, Icon } from 'semantic-ui-react'
 
 class Location extends React.Component {
  
     render() {
       return (
         <>
-          <Card centered>
-            <h2>{this.props.celestialEvents.location.city}</h2>
-            <h3>{this.props.celestialEvents.location.district}</h3>
-          </Card>
+          <div>
+            <Header as='h2' icon textAlign='center'>
+              <Icon name='moon' circular />
+              <Header.Content>{this.props.celestialEvents.location.country_name}</Header.Content>
+            </Header>
+          </div>  
          </> 
         );
       }
