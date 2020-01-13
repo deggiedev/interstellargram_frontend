@@ -10,7 +10,7 @@ const ImageCard = (props) => {
     return (
        <Card color='grey'>
             <Image src={src} />
-            <h1>Image 1</h1>
+            <h1>Description...</h1>
         </Card>
     )
 }
