@@ -10,7 +10,8 @@ const ImageCard = (props) => {
     return (
        <Card color='grey'>
             <Image src={src} />
-            <h1>Description...</h1>
+            <h4>{category}</h4>
+            <p>{description}</p>
         </Card>
     )
 }

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'semantic-ui-react'
+import UploadWidget from './UploadWidget'
 
 
-const PostForm = ({ submit, errors }) => {
+const PostForm = ({ currentUser, submit, errors }) => {
 
     const [category, setCategory] = useState('')
     const [description, setDescription] = useState('')
@@ -19,6 +20,7 @@ const PostForm = ({ submit, errors }) => {
             {
                 errors && <div style={{ color: 'red' }}>{errors.join(', ')}</div>
             }
+            <UploadWidget currentUser={currentUser} />
             <Form.Field/>
                 <input className="ImagePost" placeholder="Image URL" type="text" name="Image" value={image} onChange={e => setImage(e.target.value)} />
             <Form.Field/>

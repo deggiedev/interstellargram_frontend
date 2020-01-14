@@ -7,7 +7,7 @@ class MyAstronomy extends React.Component {
     render() {
       return (
           <>
-            <PostForm errors={this.props.errors} submit={this.props.submit}/>
+            <PostForm currentUser={this.props.user} errors={this.props.errors} submit={this.props.submit}/>
             <MyAstronomyContainer user={this.props.user} posts={this.props.posts} />            
           </>
         );
