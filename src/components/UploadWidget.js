@@ -4,7 +4,7 @@ class UploadWidget extends React.Component {
  
     checkUploadResult = (resultEvent) => {
         if (resultEvent.event === 'success') {
-            console.log(this.props.currentUser.id && resultEvent.info.secure_url)
+            console.log(this.props.currentUser.id)
         }
     }
 
