@@ -48,7 +48,6 @@ const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, su
                         :
                         <>
                             <UserForm submit={signUp} header={'Sign up'} />
-                            or
                             <UserForm submit={logIn} header={'Log in'} />
                         </>
                 }
