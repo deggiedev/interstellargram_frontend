@@ -48,12 +48,11 @@ const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, su
                         </>                
                         :
                         <>
-                            <img className="Logo" alt="" src={Logo}></img>
                             <button onClick={() => showUserForm()}>Login or Register</button>
                             
                             {showUserFormState === true ? 
                             <UserForm submit={signUp} header={'Sign up'} /> &&
-                            <UserForm submit={logIn} header={'Log in'} /> : null}
+                            <UserForm submit={logIn} header={'Log in'} /> : <img className="Logo" alt="" src={Logo}></img>}
                             
                         </>
                 }

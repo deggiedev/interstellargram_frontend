@@ -60,7 +60,7 @@ class App extends React.Component {
   }
 
   showUserForm = () => {
-    this.setState({ showUserFormState: !this.showUserFormState })
+    this.setState({ showUserFormState: !this.state.showUserFormState })
   }
 
   render() {
