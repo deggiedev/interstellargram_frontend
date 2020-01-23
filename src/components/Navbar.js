@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from '../HatchfulExport-All/logo_transparent.png'
 import UserForm from './UserForm'
 import {
     BrowserRouter as Router,
@@ -10,7 +11,7 @@ import MyAstronomy from '../containers/MyAstronomy'
 import CelestialEvents from '../containers/CelestialEvents'
 import { List } from 'semantic-ui-react'
 
-const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit }) => {
+const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit, showUserForm, showUserFormState }) => {
     return (
         <Router>        
             <nav>
@@ -47,8 +48,13 @@ const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, su
                         </>                
                         :
                         <>
-                            <UserForm submit={signUp} header={'Sign up'} />
-                            <UserForm submit={logIn} header={'Log in'} />
+                            <img className="Logo" alt="" src={Logo}></img>
+                            <button onClick={() => showUserForm()}>Login or Register</button>
+                            
+                            {showUserFormState === true ? 
+                            <UserForm submit={signUp} header={'Sign up'} /> &&
+                            <UserForm submit={logIn} header={'Log in'} /> : null}
+                            
                         </>
                 }
             </nav>

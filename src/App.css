@@ -1,11 +1,19 @@
-.App, body, html {
+.App {
   text-align: center;
-  color: white;
 }
 
 Form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
   padding-bottom: 15px;
   margin-left: 120px;
   margin-right: 120px;
   width: 250px;
 }
+
+.Logo {
+  width: 550px
+}
+

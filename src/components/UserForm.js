@@ -1,6 +1,14 @@
   
 import React, { useState } from 'react'
-import { Form, Button } from 'semantic-ui-react'
+import {
+    Button,
+    Box,
+    Flex
+  } from 'rebass'
+import {
+    Label,
+    Input
+} from '@rebass/forms'
 
 const SignupForm = ({ submit, header }) => {
 
@@ -8,17 +16,40 @@ const SignupForm = ({ submit, header }) => {
     const [password, setPassword] = useState('')
 
     return (
-        <Form onSubmit={e => {
+        <Box as='form' onSubmit={e => {
             e.preventDefault();
             submit({ username, password })
             setUsername('')
             setPassword('')
         }}>
-            <span>{header}</span>
-            <Form.Input placeholder="Username" type="username" name="username" value={username} onChange={e => setUsername(e.target.value)} />
-            <Form.Input placeholder="Password" type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} />
-            <Button type="submit">Submit</Button>
-        </Form>
+            <Flex mx={-2} mb={3}>
+                <Box width={1/2} px={2}>
+                    <Label htmlFor='name'>Username</Label>
+                    <Input
+                        type="username"
+                        id='name'
+                        name="username"
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}              
+                    />
+                </Box>
+                <Box width={1/2} px={2}>
+                <Label htmlFor='name'>Password</Label>
+                    <Input
+                        type="password"
+                        id='name'
+                        name="password"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                    />
+                    <Box px={2} ml='auto'>
+                        <Button sx={{backgroundColor: 'blue'} } className="Submitbutton" type="submit" mr={2}>
+                            Submit
+                        </Button>
+                    </Box>
+                </Box>
+            </Flex>
+        </Box>
     )
 }
 

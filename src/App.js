@@ -8,7 +8,8 @@ class App extends React.Component {
   state = {
     user: undefined,
     posts: [],
-    celestial_events: []
+    celestial_events: [],
+    showUserFormState: null
   }
 
   getPosts = () => {
@@ -58,6 +59,10 @@ class App extends React.Component {
       })
   }
 
+  showUserForm = () => {
+    this.setState({ showUserFormState: !this.showUserFormState })
+  }
+
   render() {
     return (
       <div className="App">
@@ -69,7 +74,9 @@ class App extends React.Component {
         logIn={this.logIn} 
         logOut={this.logOut} 
         errors={this.state.errors} 
-        submit={this.submitPost}/>
+        submit={this.submitPost}
+        showUserForm={this.showUserForm}
+        showUserFormState={this.state.showUserFormState}/>
       </div>
     );
   }
