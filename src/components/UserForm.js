@@ -24,25 +24,26 @@ const SignupForm = ({ submit, header }) => {
         }}>
             <Flex mx={-2} mb={3}>
                 <Box width={1/2} px={2}>
-                    <Label htmlFor='name'>Username</Label>
+                    <Label htmlFor='name'>{header}</Label>
                     <Input
                         type="username"
                         id='name'
                         name="username"
                         value={username}
                         onChange={e => setUsername(e.target.value)}   
-                        placeholder={"e.g. Tony Stark.."}           
+                        placeholder={"username.."}           
                     />
                 </Box>
                 <Box width={1/2} px={2}>
-                <Label htmlFor='name'>Password</Label>
+                <Label htmlFor='name'>...
+                </Label>
                     <Input
                         type="password"
                         id='name'
                         name="password"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
-                        placeholder={"e.g. 1r0nM4n.."} 
+                        placeholder={"password.."} 
                     />
                     <Box px={2} ml='auto' className="Submitbutton" >
                             <br></br><Button sx={{backgroundColor: 'blue'}} type="submit" mr={2}>

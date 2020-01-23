@@ -11,7 +11,9 @@ import MyAstronomy from '../containers/MyAstronomy'
 import CelestialEvents from '../containers/CelestialEvents'
 import { List } from 'semantic-ui-react'
 import {
-    Image
+    Image,
+    Flex,
+    Box
   } from 'rebass'
 
 const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit}) => {
@@ -50,7 +52,7 @@ const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, su
                         </Switch>
                         </>                
                         :
-                        <>    
+                        <> 
                         <Image
                                 src={Logo}
                                 sx={{
