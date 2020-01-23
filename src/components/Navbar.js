@@ -10,8 +10,11 @@ import Home from '../containers/Home'
 import MyAstronomy from '../containers/MyAstronomy'
 import CelestialEvents from '../containers/CelestialEvents'
 import { List } from 'semantic-ui-react'
+import {
+    Image
+  } from 'rebass'
 
-const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit, showUserForm, showUserFormState }) => {
+const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit}) => {
     return (
         <Router>        
             <nav>
@@ -47,13 +50,16 @@ const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, su
                         </Switch>
                         </>                
                         :
-                        <>
-                            <button onClick={() => showUserForm()}>Login or Register</button>
-                            
-                            {showUserFormState === true ? 
-                            <UserForm submit={signUp} header={'Sign up'} /> &&
-                            <UserForm submit={logIn} header={'Log in'} /> : <img className="Logo" alt="" src={Logo}></img>}
-                            
+                        <>    
+                        <Image
+                                src={Logo}
+                                sx={{
+                                    width: [ '100%', '50%' ],
+                                    borderRadius: 8,
+                                    }}
+                        />
+                            <UserForm submit={logIn} header={'Log in'} /> 
+                            <UserForm submit={signUp} header={'Sign up'} />   
                         </>
                 }
             </nav>

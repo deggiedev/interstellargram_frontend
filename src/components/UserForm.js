@@ -30,7 +30,8 @@ const SignupForm = ({ submit, header }) => {
                         id='name'
                         name="username"
                         value={username}
-                        onChange={e => setUsername(e.target.value)}              
+                        onChange={e => setUsername(e.target.value)}   
+                        placeholder={"e.g. Tony Stark.."}           
                     />
                 </Box>
                 <Box width={1/2} px={2}>
@@ -41,9 +42,10 @@ const SignupForm = ({ submit, header }) => {
                         name="password"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
+                        placeholder={"e.g. 1r0nM4n.."} 
                     />
-                    <Box px={2} ml='auto'>
-                        <Button sx={{backgroundColor: 'blue'} } className="Submitbutton" type="submit" mr={2}>
+                    <Box px={2} ml='auto' className="Submitbutton" >
+                            <br></br><Button sx={{backgroundColor: 'blue'}} type="submit" mr={2}>
                             Submit
                         </Button>
                     </Box>
