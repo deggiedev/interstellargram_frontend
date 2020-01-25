@@ -9,6 +9,7 @@ class App extends React.Component {
     user: undefined,
     posts: [],
     celestial_events: [],
+    showUserForm: false
   }
 
   getPosts = () => {
@@ -58,10 +59,15 @@ class App extends React.Component {
       })
   }
 
+  showUserForm = () => {
+    this.setState({showUserForm: !this.state.showUserForm})
+  }
+
   render() {
     return (
       <div className="App">
         <Navbar 
+        className="Navbar"
         posts={this.state.posts} 
         user={this.state.user}
         celestialEvents={this.state.celestial_events} 
@@ -70,6 +76,9 @@ class App extends React.Component {
         logOut={this.logOut} 
         errors={this.state.errors} 
         submit={this.submitPost}
+        showUserForm={this.showUserForm}
+        showUserFormState={this.state.showUserForm}
+
         />
       </div>
     );

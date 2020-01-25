@@ -1,5 +1,9 @@
-.App {
+.App, html, .NavbarContainer {
   text-align: center;
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2980b9, #6dd5fa, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%
 }
 
 Form {
@@ -7,7 +11,7 @@ Form {
   padding-bottom: 15px;
   margin-left: 120px;
   margin-right: 120px;
-  width: 300px;
+  width: 380px;
 }
 
 .Logo {

@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from '../HatchfulExport-All/logo_transparent.png'
-import UserForm from './UserForm'
+import '../App.css';
+import UserFormContainer from '../containers/UserFormContainer.js'
 import {
     BrowserRouter as Router,
     Route,
@@ -10,13 +10,10 @@ import Home from '../containers/Home'
 import MyAstronomy from '../containers/MyAstronomy'
 import CelestialEvents from '../containers/CelestialEvents'
 import { List } from 'semantic-ui-react'
-import {
-    Image,
-    Flex,
-    Box
-  } from 'rebass'
+import { Image, Flex, Button }  from 'rebass'
+import Logo from '../HatchfulExport-All/logo_transparent.png'
 
-const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit}) => {
+const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit, showUserForm, showUserFormState }) => {
     return (
         <Router>        
             <nav>
@@ -53,15 +50,11 @@ const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, su
                         </>                
                         :
                         <> 
-                        <Image
-                                src={Logo}
-                                sx={{
-                                    width: [ '100%', '50%' ],
-                                    borderRadius: 8,
-                                    }}
-                        />
-                            <UserForm submit={logIn} header={'Log in'} /> 
-                            <UserForm submit={signUp} header={'Sign up'} />   
+                            {showUserFormState === true ? <UserFormContainer className="UserFormContainer" loginSubmit={logIn}  signupSubmit={signUp}/> 
+                            :
+                            <>                     
+                                <Image src={Logo} onClick={() => showUserForm()} sx={{ width: 800, borderRadius: 8, }} />               
+                            </>}
                         </>
                 }
             </nav>
