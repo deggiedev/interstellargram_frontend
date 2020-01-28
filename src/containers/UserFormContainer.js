@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../App.css';
 import UserForm from '../components/UserForm.js'
 import { Box }  from 'rebass'
 
 
-class UserFormContainer extends React.Component {
+class UserFormContainer extends Component {
  
     render() {
       return (
