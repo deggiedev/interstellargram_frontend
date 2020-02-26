@@ -11,7 +11,7 @@ import MyAstronomy from '../containers/MyAstronomy'
 import CelestialEvents from '../containers/CelestialEvents'
 import { List } from 'semantic-ui-react'
 import { Image }  from 'rebass'
-import Logo from '../HatchfulExport-All/logo_transparent.png'
+import Logo from '../images/logo_transparent.png'
 
 const Navbar = ({celestialEvents, posts, user, signUp, logIn, logOut, errors, submit, showUserForm, showUserFormState }) => {
     return (

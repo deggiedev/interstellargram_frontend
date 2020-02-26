@@ -78,7 +78,6 @@ class App extends React.Component {
         submit={this.submitPost}
         showUserForm={this.showUserForm}
         showUserFormState={this.state.showUserForm}
-
         />
       </div>
     );

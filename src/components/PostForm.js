@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Form, Button } from 'semantic-ui-react'
+import { Box, Button } from 'rebass'
+import { Input, Textarea} from '@rebass/forms'
 
 const PostForm = ({ currentUser, submit, errors }) => {
 
@@ -8,7 +9,7 @@ const PostForm = ({ currentUser, submit, errors }) => {
     const [image, setImage] = useState('')
 
     return (
-        <Form onSubmit={e => {
+        <Box pl={4} as='form' onSubmit={e => {
             e.preventDefault();
             submit({ category, description, image })
             setCategory('')
@@ -18,17 +19,19 @@ const PostForm = ({ currentUser, submit, errors }) => {
             {
                 errors && <div style={{ color: 'red' }}>{errors.join(', ')}</div>
             }
-            <Form.Field/>
-                <input className="ImagePost" placeholder="Image URL" type="text" name="Image" value={image} onChange={e => setImage(e.target.value)} />
-            <Form.Field/>
-            <Form.Field/>
-                <input className="CategoryPost" placeholder="Category" type="text" name="Category" value={category} onChange={e => setCategory(e.target.value)} />
-            <Form.Field/>
-            <Form.Field/>
-                <textarea className="DescriptionPost" placeholder="Description..." name="description" value={description} onChange={e => setDescription(e.target.value)} />
-            <Form.Field/>
-            <Button className="SubmitPost" color='blue' type="submit"fluid>Post</Button>
-        </Form>
+            <Box p={1}/>
+                <Input bg='white' className="ImagePost" placeholder="Image URL..." type="text" name="Image" value={image} onChange={e => setImage(e.target.value)} />
+            <Box/>
+            <Box p={2}/>
+                <Input bg='white' className="CategoryPost" placeholder="Category..." type="text" name="Category" value={category} onChange={e => setCategory(e.target.value)} />
+            <Box/>
+            <Box p={2}/>
+                <Textarea bg='white' className="DescriptionPost" placeholder="Description..." name="description" value={description} onChange={e => setDescription(e.target.value)} />
+            <Box/>
+            <Box p={2}>
+                <Button bg='blue' className="SubmitPost" color='white' type="submit">Post</Button>
+            </Box>
+        </Box>
     )
 }
 

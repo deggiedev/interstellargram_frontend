@@ -1,15 +1,15 @@
 import React from 'react';
 import ImageCard from '../components/ImageCard'
-import { Card } from 'semantic-ui-react'
+import { Tiles } from '@rebass/layout'
 
 class HomeContainer extends React.Component {
  
     render() {
       return (
           <>
-            <Card.Group centered className="HomeContainer">
-            {this.props.posts.map(post => <ImageCard post={post}/>)}
-            </Card.Group>
+            <Tiles p={4} pt={2} columns={[2, null, 4]}>
+                {this.props.posts.map(post => <ImageCard post={post}/>)}
+            </Tiles>
           </>
         );
       }
