@@ -9,7 +9,7 @@ class MyAstronomy extends React.Component {
       return (
           <> 
           <Flex mx={-2}>
-              <Box width={1/2}>
+              <Box p={4} width={1/2}>
                   <Image src={'https://cdn.pixabay.com/photo/2012/11/28/09/08/mars-67522_960_720.jpg'} 
                   sx={{
                         width: 188,
@@ -18,7 +18,7 @@ class MyAstronomy extends React.Component {
                       }}
                   />  
               </Box>
-              <Box  width={1/2}>
+              <Box p={2} width={1/2}>
                 
               </Box>
             </Flex>             
